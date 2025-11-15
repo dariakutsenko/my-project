@@ -1,0 +1,46 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.index-grid {
+    display: grid;
+    grid-template-rows: auto 1fr 100px;
+    min-height: 100vh;
+    gap: 10px;
+    padding: 20px;
+}
+.index-grid > * {
+    border: 2px solid #8ca0ff;
+    padding: 20px;
+}
+.site-header {
+    grid-row: 1;
+}
+.site-footer {
+    grid-row: 3;
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: 
+    "filter sorting"
+    "filter goods"
+    "filter goodss";
+    gap: 10px;
+}
+.catalog-grid > * {
+    border: 2px solid #8ca0ff;
+    padding: 20px;
+}
+.filter {
+    grid-area: filter;
+}
+.sorting {
+    grid-area: sorting;
+}
+.goods {
+    grid-area: goods;
+}
